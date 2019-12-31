@@ -220,7 +220,7 @@ WORKDIR /
 
 # Switch default settings.xml with currect one
 
-ADD $ROOT/var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
+ADD $JENKINS_HOME/var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
 
 # Fetch the variabled needed for the GithubScanner
 ENV accessKey="_"
