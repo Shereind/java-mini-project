@@ -219,7 +219,8 @@ ENV PATH $HOME/.cargo/bin:$PATH
 WORKDIR /
 
 # Switch default settings.xml with currect one
-ADD /var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
+
+ADD $ROOT/var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
 
 # Fetch the variabled needed for the GithubScanner
 ENV accessKey="_"
