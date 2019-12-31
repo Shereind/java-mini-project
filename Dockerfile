@@ -219,9 +219,7 @@ ENV PATH $HOME/.cargo/bin:$PATH
 WORKDIR /
 
 # Switch default settings.xml with currect one
-RUN rm /usr/share/maven/conf/settings.xml
-RUN wget https://s3.amazonaws.com/github-scanner/settings.xml
-RUN mv /settings.xml /usr/share/maven/conf/settings.xml
+ADD /var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
 
 # Fetch the variabled needed for the GithubScanner
 ENV accessKey="_"
