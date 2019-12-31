@@ -220,6 +220,7 @@ WORKDIR /
 
 # Switch default settings.xml with currect one
 
+RUN printenv
 ADD $JENKINS_HOME/var/lib/jenkins/.m2/settings.xml /usr/share/maven/conf/settings.xml
 
 # Fetch the variabled needed for the GithubScanner
