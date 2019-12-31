@@ -1,9 +1,8 @@
 pipeline {
     agent {
-            dockerfile {
-                dir ''
-                args '-v /root/.m2:/root/.m2'
-            }
+        dockerfile {
+            args '-v /root/.m2:/root/.m2 -v /var/lib/jenkins/.m2/settings.xml:/usr/share/maven/conf/settings.xml'
+        }
      }
     stages {
         stage('Build') {
