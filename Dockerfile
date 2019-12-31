@@ -220,7 +220,7 @@ WORKDIR /
 
 # Switch default settings.xml with currect one
 
-ADD /.m2/settings.xml /usr/share/maven/conf/settings.xml
+#ADD /.m2/settings.xml /usr/share/maven/conf/settings.xml
 
 # Fetch the variabled needed for the GithubScanner
 ENV accessKey="_"
