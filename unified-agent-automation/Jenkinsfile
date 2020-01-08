@@ -1,6 +1,7 @@
 pipeline {
     agent {
         dockerfile {
+        dir "$HOME/unified-agent-automation"
             args '-v /root/.m2:/root/.m2 -v /var/lib/jenkins/.m2/settings.xml:/usr/share/maven/conf/settings.xml'
         }
      }
